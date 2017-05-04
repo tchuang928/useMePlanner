@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>useMe Planner</title>
+
+		<!-- css files -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="public/css/styles.css">
+		<link rel="icon" type="image/x-icon" href="public/img/favicon.ico">
+		<meta name="author" content="Tom Huang">
+
+		<meta name="viewport" content="width=device-width, initial-scale=9.0">
+	</head>
+	<body class="container">
+		<div id="master">
+			<div>
+				<a class="leftPadding" href="http://gmail.com/">
+					<span class="icon">
+						<i class="fa fa-envelope"></i>
+					</span>
+				</a>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="col-md-2">
+						<h1 class="base hidden-sm hidden-xs" id="monthNum"></h1>
+					</div>
+					<div class="col-md-10 borderRight">
+						<h5 id="yearmonth"></h5>
+					</div>
+					<div class="col-md-2 borderDay">
+						<h4>MON</h4>	
+					</div>
+					<div class="col-md-10 borderText">
+						<ul>
+							<li>Clean room</li>
+							<li>Wash the pewps</li>
+							<li>Shower.. cus I stink</li>
+						</ul>	
+					</div>
+				</div>
+				<div class="col-md-6">
+					<textarea class="form-control well"></textarea>
+				</div>
+			</div>
+			<script src="src/date.js"></script>
+		</div>
+	</body>
+</html>

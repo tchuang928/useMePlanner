@@ -1,0 +1,82 @@
+body {
+	background-color: black;
+}
+
+#master {
+	width: 1080px;
+	height: 100vh;
+	background-color: white;
+	margin:auto;
+}
+
+.row {
+	width: 1080px;
+	margin: auto;
+}
+.headerSpacing {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.base {
+	background: #B0E0D2;
+	display: inline-block;
+	height: 33px;
+	margin-left: 1px;
+	margin-top: 10px;
+		position: relative;
+		width: 60px;
+}
+
+.base:before {
+	border-top: 15px solid #B0E0D2;
+	border-right: 30px solid transparent;
+	border-left: 30px solid transparent;
+	content:"";
+	height: 0;
+	left: 0;
+	position: absolute;
+	bottom: -15px;
+	width: 0;
+}
+
+#monthNum {
+	padding-top: 1px;
+	padding-left: 20px;
+	color: white;
+}
+
+.leftPadding {
+	padding-left: 32px;
+}
+
+/* not used right now */
+.borderStyle {
+	border-color: #AAA;	
+	margin-top: 0px;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.borderText {
+	border-left: 1px solid #AAA;
+	border-top: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+}
+
+.borderDay {
+	border-top: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+	margin-left: 10px;
+	width: 75px;
+	height: 70px;
+}
+
+textarea.form-control {
+	height: 93vh;
+	width: 490px;
+}
