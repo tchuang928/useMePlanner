@@ -13,6 +13,22 @@ body {
 	width: 1080px;
 	margin: auto;
 }
+
+/* dimension formatting for two main columns */
+
+#weeklyCol {
+	height: 93vh;
+}
+
+#textCol {
+	height: 93vh;
+	width: 490px;
+}
+textarea.form-control {
+	height: 93vh;
+	width: 490px;
+}
+
 .headerSpacing {
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -62,21 +78,42 @@ body {
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
+/* borders for calendar week */
+
 .borderText {
 	border-left: 1px solid #AAA;
 	border-top: 1px solid #AAA;
-	border-bottom: 1px solid #AAA;
+	overflow: auto;
+	width: 405px;
+	height: 12.20vh;
 }
 
 .borderDay {
 	border-top: 1px solid #AAA;
-	border-bottom: 1px solid #AAA;
 	margin-left: 10px;
-	width: 75px;
-	height: 70px;
+	width: 95px;
 }
 
-textarea.form-control {
-	height: 93vh;
-	width: 490px;
+/* checkboxes http://bootsnipp.com/snippets/featured/checkboxradio-css-only */
+.checkbox {
+	margin: 0px;
+	padding: 0px;
+}
+
+.btn span.glyphicon {    			
+	opacity: 0;				
+}
+
+.btn.active span.glyphicon {				
+	opacity: 1;				
+}
+
+.monthDay {
+	padding: 3px 0px 0px 0px;
+	margin: 0px;
+}
+
+.day {
+	padding: 4.5px 0px 0px 0px;
+	margin: 0px;
 }
