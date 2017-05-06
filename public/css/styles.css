@@ -24,7 +24,7 @@ body {
 	height: 93vh;
 	width: 490px;
 }
-textarea.form-control {
+textarea.form-control1 {
 	height: 93vh;
 	width: 490px;
 }
@@ -78,14 +78,17 @@ textarea.form-control {
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-/* borders for calendar week */
+/* formatting for calendar week */
 
 .borderText {
 	border-left: 1px solid #AAA;
 	border-top: 1px solid #AAA;
-	overflow: auto;
+}
+
+.alignText {
 	width: 405px;
 	height: 12.20vh;
+	overflow: auto;
 }
 
 .borderDay {
@@ -94,18 +97,9 @@ textarea.form-control {
 	width: 95px;
 }
 
-/* checkboxes http://bootsnipp.com/snippets/featured/checkboxradio-css-only */
-.checkbox {
-	margin: 0px;
-	padding: 0px;
-}
-
-.btn span.glyphicon {    			
-	opacity: 0;				
-}
-
-.btn.active span.glyphicon {				
-	opacity: 1;				
+.alignDay {
+	margin-left: 10px;
+	width: 95px;
 }
 
 .monthDay {
@@ -116,4 +110,73 @@ textarea.form-control {
 .day {
 	padding: 4.5px 0px 0px 0px;
 	margin: 0px;
+}
+
+input[type="checkbox"] {
+	margin-top: 6px;
+}
+
+.checkbox {
+	margin: 0px;
+	height: 28px;
+	width: 10px;
+	margin: 0px;
+}
+
+/* button formatting */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+	font-size: 5px;
+}
+
+.checkboxBtn {
+	position: absolute;
+  border: 0px solid transparent;
+	background: none !important;
+	font-size: 5px;
+	right: 5px;
+	bottom: 6px;
+	height: 22px;
+	
+}
+
+/*Color button & icons*/
+.btn:focus {
+  background: none !important;
+}
+
+.btn:hover {
+	background-color: #FCC1C5 !important;
+}
+
+.fa-times {
+  color: #F53240;
+	font-size: 11px;
+}
+
+
+
+/*Add borders when hover or click on input boxes*/
+
+.checkboxText {
+  outline: none;
+  box-shadow: none !important;
+	border: none;
+	padding: 0px;
+	margin: 2px 0px 0px 0px;
+	width: 330px;
+	height: 23px;
+	overflow: auto;
+	resize: auto;
+}
+
+.checkboxText:focus,
+.checkboxText:hover {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
 }
