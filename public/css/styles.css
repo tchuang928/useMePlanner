@@ -142,7 +142,6 @@ input[type="checkbox"] {
 	right: 5px;
 	bottom: 6px;
 	height: 22px;
-	
 }
 
 /*Color button & icons*/
@@ -151,15 +150,13 @@ input[type="checkbox"] {
 }
 
 .btn:hover {
-	background-color: #FCC1C5 !important;
+	background-color: #FFF !important;
 }
 
 .fa-times {
-  color: #F53240;
+  color: #EEE;
 	font-size: 11px;
 }
-
-
 
 /*Add borders when hover or click on input boxes*/
 

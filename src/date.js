@@ -61,49 +61,6 @@ for (let i = 0; i < days.length; i++) {
 	dateHelper.setTime(thisTime);
 }
 
-// Make to-do list checkboxes user interactive
-/*$('#day02').click(function(section) {
-	if (section.target === this) {
-		$('#checkbox2').append(
-			"<div class='checkbox'>" +
-				"<label>" +
-					"<div class='input-group'>" +
-						"<input type='checkbox' value=''>" +
-						"<textarea class='checkboxText' ></textarea>" +
-							"<button class='btn checkboxBtn' type='button'>" +
-								"<i class='fa fa-times'></i>" +
-							"</button>" +
-					"</div>" +
-				"</label>" +
-			"</div>"
-		);	
-	}
-});*/
-$(document).on('click', '.borderText', function(section){
-	let checkboxID = $(this).children().closest('div');
-	if (section.target === this) {
-	$(checkboxID).append(
-			"<div class='checkbox'>" +
-				"<label>" +
-					"<div class='input-group'>" +
-						"<input type='checkbox' value=''>" +
-						"<textarea class='checkboxText' ></textarea>" +
-							"<button class='btn checkboxBtn' type='button'>" +
-								"<i class='fa fa-times'></i>" +
-							"</button>" +
-					"</div>" +
-				"</label>" +
-			"</div>"
-		);	
-	}
-});
-
-// delete task when clicking button
-// in the entire document, when checkboxBtn is clicked, run function
-$(document).on('click', '.checkboxBtn', function(section) {
-	let checkboxDiv = $(this).parent().closest('div').parent().closest('div');
-	$(checkboxDiv).remove();
-});
 
 
 
