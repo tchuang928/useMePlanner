@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>useMe Planner</title>
+
+		<!-- css files -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="public/css/styles.css">
+		<link rel="stylesheet" href="node_modules/sweetalert/dist/sweetalert.css">
+		<link rel="icon" type="image/x-icon" href="public/img/favicon.ico">
+		<meta charset="utf-8">	
+		<meta name="author" content="Tom Huang">
+		<meta name="viewport" content="width=device-width, initial-scale=9.0">
+	</head>
+	<body class="container">
+		<div id="master">
+
+			<!-- Navigation bar -->
+
+			<div>
+				<a class="leftPadding" target="_blank" href="http://gmail.com/">
+					<span class="icon">
+						<i class="fa fa-envelope"></i>
+					</span>
+				</a>
+			</div>
+			<div class="row">
+				<div class="col-md-6" id="weeklyCol">
+
+					<!-- Weekly Calendar Header -->
+
+					<div class="col-md-2">
+						<h1 class="base hidden-sm hidden-xs" id="monthNum"></h1>
+					</div>
+					<div class="col-md-10 borderRight">
+						<h5 id="yearMonth"></h5>
+					</div>
+
+					<!-- Weekly Calendar to-do -->
+					<div>
+						<div class="col-md-2 borderDay alignDay" id="day0">
+							<div class="col-md-6 monthDay">
+								<h3 class="monthDay" id="sun"></h3>
+							</div>
+							<div class="col-md-6 day">
+								<h6 class="day">SUN</h6>	
+							</div>
+						</div>
+						<div class="col-md-10 borderText alignText" id="day00">
+							<div id="checkbox0">
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="col-md-2 borderDay alignDay" id="day1">
+							<div class="col-md-6 monthDay">
+								<h3 class="monthDay" id="mon"></h3>
+							</div>
+							<div class="col-md-6 day">
+								<h6 class="day">MON</h6>	
+							</div>
+						</div>
+						<div class="col-md-10 borderText alignText" id="day01">
+							<div id="checkbox1">
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="col-md-2 borderDay alignDay" id="day2">
+							<div class="col-md-6 monthDay">
+								<h3 class="monthDay" id="tue"></h3>
+							</div>
+							<div class="col-md-6 day">
+								<h6 class="day">TUE</h6>	
+							</div>
+						</div>
+						<div class="col-md-10 borderText alignText" id="day02">
+							<div id="checkbox2">
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="col-md-2 borderDay alignDay" id="day3">
+							<div class="col-md-6 monthDay">
+								<h3 class="monthDay" id="wed"></h3>
+							</div>
+							<div class="col-md-6 day">
+								<h6 class="day">WED</h6>	
+							</div>
+						</div>
+						<div class="col-md-10 borderText alignText" id="day03">
+							<div id="checkbox3">
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="col-md-2 borderDay alignDay" id="day4">
+							<div class="col-md-6 monthDay">
+								<h3 class="monthDay" id="thu"></h3>
+							</div>
+							<div class="col-md-6 day">
+								<h6 class="day">THU</h6>	
+							</div>
+						</div>
+						<div class="col-md-10 borderText alignText" id="day04">
+							<div id="checkbox4">
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="col-md-2 borderDay alignDay" id="day5">
+							<div class="col-md-6 monthDay">
+								<h3 class="monthDay" id="fri"></h3>
+							</div>
+							<div class="col-md-6 day">
+								<h6 class="day">FRI</h6>	
+							</div>
+						</div>
+						<div class="col-md-10 borderText alignText" id="day05">
+							<div id="checkbox5">
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="col-md-2 borderDay alignDay" id="day6">
+							<div class="col-md-6 monthDay">
+								<h3 class="monthDay" id="sat"></h3>
+							</div>
+							<div class="col-md-6 day">
+								<h6 class="day">SAT</h6>	
+							</div>
+						</div>
+						<div class="col-md-10 borderText alignText" id="day06">
+							<div id="checkbox6">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- journal area -->
+
+				<div class="col-md-6" id="textCol">
+					<textarea class="journalText form-control form-control1 well" placeholder='Notes'></textarea>
+				</div>
+			</div>
+		</div>
+			<script src="public/js/jquery-3.2.1.js"></script>
+			<script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+			<script src="src/app.js"></script>
+	</body>
+</html>

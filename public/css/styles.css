@@ -1,0 +1,188 @@
+body {
+	background-color: black;
+}
+
+#master {
+	width: 1080px;
+	height: 100vh;
+	background-color: white;
+	margin:auto;
+}
+
+.row {
+	width: 1080px;
+	margin: auto;
+}
+
+/* dimension formatting for two main columns */
+
+#weeklyCol {
+	height: 93vh;
+}
+
+#textCol {
+	height: 93vh;
+	width: 490px;
+}
+textarea.form-control1 {
+	height: 93vh;
+	width: 490px;
+	box-shadow: none !important;
+}
+
+.journalText:focus,
+.journalText:hover,
+.checkboxText:focus,
+.checkboxText:hover {
+  border: 1px solid #AAA;
+  border-radius: 4px;
+}
+
+.headerSpacing {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.base {
+	background: #B0E0D2;
+	display: inline-block;
+	height: 33px;
+	margin-left: 1px;
+	margin-top: 10px;
+		position: relative;
+		width: 60px;
+}
+
+.base:before {
+	border-top: 15px solid #B0E0D2;
+	border-right: 30px solid transparent;
+	border-left: 30px solid transparent;
+	content:"";
+	height: 0;
+	left: 0;
+	position: absolute;
+	bottom: -15px;
+	width: 0;
+}
+
+#monthNum {
+	padding-top: 0px;
+	padding-left: 20px;
+	color: white;
+}
+
+.leftPadding {
+	padding-left: 32px;
+}
+
+/* not used right now */
+.borderStyle {
+	border-color: #AAA;	
+	margin-top: 0px;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* formatting for calendar week */
+
+.borderText {
+	border-left: 1px solid #AAA;
+	border-top: 1px solid #AAA;
+}
+
+.alignText {
+	width: 405px;
+	height: 12.20vh;
+	overflow: auto;
+}
+
+.borderDay {
+	border-top: 1px solid #AAA;
+	margin-left: 10px;
+	width: 95px;
+}
+
+.alignDay {
+	margin-left: 10px;
+	width: 95px;
+}
+
+.monthDay {
+	padding: 3px 0px 0px 0px;
+	margin: 0px;
+}
+
+.day {
+	padding: 4.5px 0px 0px 0px;
+	margin: 0px;
+}
+
+input[type="checkbox"] {
+	margin-top: 6px;
+}
+
+.checkbox {
+	margin: 0px;
+	height: 28px;
+	width: 10px;
+	margin: 0px;
+}
+
+/* button formatting */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+	font-size: 5px;
+}
+
+.checkboxBtn {
+	position: absolute;
+  border: 0px solid transparent;
+	background: none !important;
+	font-size: 5px;
+	right: 5px;
+	bottom: 6px;
+	height: 22px;
+}
+
+/*Color button & icons*/
+.btn:focus {
+  background: none !important;
+}
+
+.btn:hover {
+	background-color: transparent !important;
+}
+
+.fa-times {
+  color: #EEE;
+	font-size: 11px;
+}
+
+/*Add borders when hover or click on input boxes*/
+
+.checkboxText {
+  outline: none;
+  box-shadow: none !important;
+	border: none;
+	padding: 0px;
+	margin: 2px 0px 0px 0px;
+	width: 330px;
+	height: 23px;
+	overflow: auto;
+	resize: auto;
+}
+
+.checkboxText:focus,
+.checkboxText:hover {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
