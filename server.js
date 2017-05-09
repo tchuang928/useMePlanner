@@ -1,16 +1,15 @@
 import config from './config';
 import fs from 'fs';
 import express from 'express';
-import path from 'path';
 
 const server = express();
 server.set('views', __dirname);
 
+//.use() mounts a specified middleware
 server.use(express.static(__dirname));
 
 // returns content of root level
 server.get('/', (req, res) => {
-	//res.send(path.join(__dirname+'/index.html'));
 	res.sendFile('/index.html');
 });
 

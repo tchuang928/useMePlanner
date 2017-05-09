@@ -1,0 +1,10 @@
+-- .focus() on task when it is created
+-- use enter to move to next task
+-- if nothing is entered in a task, delete task
+-- add post-its in the foreground
+-- create function to detect how much memory is left in localstorage
+-- delete entire page button
+-- delete journal entry button
+-- daily quote, change quote button
+-- font customization
+-- theme customization

@@ -1,5 +1,5 @@
 var date = new Date();
-var dateHelper = new Date();
+var dateHelper = date; 
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
@@ -61,38 +61,39 @@ for (let i = 0; i < days.length; i++) {
 	dateHelper.setTime(thisTime);
 }
 
+
+
+
 // add checklist task when clicking empty area of weekly to-do section 
-$(document).on('click', '.alignText', function(section){
+$('.borderText').on('click', function(section) {
 	let checkboxID = $(this).children().closest('div');
 	// only add checklist task when clicking on the same section
 	if (section.target === this) {
-	$(checkboxID).append(
+		let checkboxHtml = 
 			"<div class='checkbox'>" +
 				"<label>" +
 					"<div class='input-group'>" +
 						"<input type='checkbox' value=''>" +
-						"<textarea class='checkboxText' ></textarea>" +
+						`<textarea class='checkboxText' placeholder='New Task' ></textarea>` +
 							"<button class='btn checkboxBtn' type='button'>" +
 								"<i class='fa fa-times'></i>" +
 							"</button>" +
 					"</div>" +
 				"</label>" +
-			"</div>"
-		);	
+			"</div>";
+		// add the html 
+		$(checkboxID).append(checkboxHtml);	
+		// focus on task item when generated
+
 	}
 });
-
-
-
-
-
-
-
 
 // delete task when clicking button
 // in the entire document, when a checkboxBtn is clicked, run function on the corresponding text box
 $(document).on('click', '.checkboxBtn', function(section) {
-	let checkboxDiv = $(this).parent().closest('div').parent().closest('div');
+	let checkboxDiv = $(this).closest('div').parent().closest('div');
+	let textAreaCheckbox = $(this).parent().children().closest('textarea');
+	let localStorageCheckbox = $(textAreaCheckbox).attr('id');
 	// confirm dialog before deleting task
 	// sweetalert
 	swal({
@@ -102,7 +103,10 @@ $(document).on('click', '.checkboxBtn', function(section) {
 		confirmButtonColor: '#DD6B55',
 		showCancelButton: true,
 		allowOutsideClick: true
-	}, () => $(checkboxDiv).remove());
+	}, () => {
+		$(checkboxDiv).remove();
+		localStorage.removeItem(localStorageCheckbox);
+	});
 });
 
 // when hovering over button, hightlight the delete icon
@@ -120,7 +124,73 @@ $(document).on({
 
 
 
+// autosave and load journal text
+var journalText = document.querySelector('.journalText');
 
+try {
+	// save journal entry
+	setInterval(function() {
+		localStorage.setItem('journal', journalText.value);
+	}, 1000);
+	// alert if no more memory available
+} catch (e) {
+	if (e == QUOTA_EXCEEDED_ERR) {
+		swal({
+			title: 'WARNING',
+			text: 'Memory exceeded. Autosave feature is disabled until local storage is cleared.',
+			type: 'warning',
+			allowOutsideClick: true
+		});
+	}
+}
 
+// load if there is data available
+if (localStorage.getItem('journal')) {
+	journalText.value = localStorage.getItem('journal');
+}
+
+// autosave and load checkbox items
+for (let i = 0; i < 7; i++) {
+	try {
+		// every 1 second
+		setInterval(function() {
+			var checkboxes = $(`#checkbox${i}`).html();
+
+			// add entire checkbox div html into localstorage
+			localStorage.setItem(`checkboxItem${i}`, checkboxes);
+
+			var id = 0;
+			$('.checkboxText').each(function() {
+				// add ids to each textarea of checkbox
+				$(this).attr('id', `checkboxText${id}`);
+				var checkboxTexts = document.querySelector(`#checkboxText${id}`);
+				// add user input into DOM using .html
+				$(`#checkboxText${id}`).html(checkboxTexts.value);
+
+				// if checkboxes are checked, then save it to DOM. 
+				if ($(this).parent().children().closest('input').prop('checked')) {
+					$(this).parent().children().closest('input').attr('checked', true);
+				} else $(this).parent().children().closest('input').attr('checked', false);
+
+				id++;
+			})
+		}, 1000);
+		// alert if no more memory available
+	} catch (e) {
+		if (e == QUOTA_EXCEEDED_ERR) {
+			swal({
+				title: 'WARNING',
+				text: 'Memory exceeded. Autosave feature is disabled until local storage is cleared.',
+				type: 'warning',
+				allowOutsideClick: true
+			});
+		}
+	}
+
+	// load if there is data available
+	if (localStorage.getItem(`checkboxItem${i}`)) {
+		$(`#checkbox${i}`).html(localStorage.getItem(`checkboxItem${i}`));
+	}
+}
 
 
