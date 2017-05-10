@@ -88,6 +88,11 @@ $('.borderText').on('click', function(section) {
 	}
 });
 
+// check if there is localStorage
+function supportsLocalStorage() {
+	return typeof(Storage) !== 'undefined';
+}
+
 // delete task when clicking button
 // in the entire document, when a checkboxBtn is clicked, run function on the corresponding text box
 $(document).on('click', '.checkboxBtn', function(section) {
@@ -105,7 +110,6 @@ $(document).on('click', '.checkboxBtn', function(section) {
 		allowOutsideClick: true
 	}, () => {
 		$(checkboxDiv).remove();
-		localStorage.removeItem(localStorageCheckbox);
 	});
 });
 
