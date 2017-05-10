@@ -149,7 +149,7 @@ input[type="checkbox"] {
 	background: none !important;
 	font-size: 5px;
 	right: 5px;
-	bottom: 6px;
+	top: 2px;
 	height: 22px;
 }
 
