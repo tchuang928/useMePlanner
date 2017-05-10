@@ -1,0 +1,3 @@
+# build settings
+
+include: [node_modules]
