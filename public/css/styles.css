@@ -49,7 +49,7 @@ textarea.form-control1 {
 .base {
 	background: #B0E0D2;
 	display: inline-block;
-	height: 33px;
+	height: 34px;
 	margin-left: 1px;
 	margin-top: 10px;
 		position: relative;
@@ -69,7 +69,6 @@ textarea.form-control1 {
 }
 
 #monthNum {
-	padding-top: 0px;
 	padding-left: 20px;
 	color: white;
 }
