@@ -30,7 +30,7 @@ var thisTime = date.getTime();
 
 // jQuery and template string literals
 $('#yearMonth').html(
-	`${thisYear}  &#9830  ${thisMonth}<br>--------------------------------------------<br><i>"Random Quote of the Day"</i>`
+	`${thisYear}  &#9830  ${thisMonth}<br>--------------------------------------------<br><i>"Better to do something imperfectly than to do nothing flawlessly."</i>`
 );
 $('#monthNum').html(date.getMonth() + 1);
 
