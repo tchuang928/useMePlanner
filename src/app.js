@@ -101,6 +101,7 @@ $(document).on('click', '.checkboxBtn', function(section) {
 	let localStorageCheckbox = $(textAreaCheckbox).attr('id');
 	// confirm dialog before deleting task
 	// sweetalert
+	alert('test');
 	swal({
 		title: 'Are you sure?',
 		text: 'This action cannot be undone!',
