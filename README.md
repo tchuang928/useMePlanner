@@ -1,6 +1,6 @@
 # useMe Planner
 
-An experimental web planner.  
+Just a web planner.  
 
 [useMe!](https://tchuang928.github.io/useMePlanner/)
 
