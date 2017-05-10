@@ -109,7 +109,7 @@ $(document).on('click', '.checkboxBtn', function(section) {
 		showCancelButton: true,
 		allowOutsideClick: true
 	}, () => {
-		$(checkboxDiv).remove();
+		$(checkboxDiv).remove();	
 	});
 });
 
